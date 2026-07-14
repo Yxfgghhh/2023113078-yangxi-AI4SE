@@ -1,0 +1,16 @@
+Comparison with results/ai_model_metrics.csv
+Loaded ai_model_metrics.csv with 2 rows
+
+Top 5 LLM runs by F1:
+results\llm_review_results_ctx1_ptrole.csv: F1=0.5556, Acc=0.5102, BLEU=2.7020448704477342, ROUGE_L=0.04765516112237357
+results\llm_review_results_ctx1_ptcot.csv: F1=0.4815, Acc=0.5359, BLEU=2.7999003580173207, ROUGE_L=0.06553713276538256
+results\llm_review_results_ctx1_ptfew.csv: F1=0.4541, Acc=0.4541, BLEU=0.3583097946733563, ROUGE_L=0.06460880445983191
+results\llm_review_results_ctx1_ptzero.csv: F1=0.4444, Acc=0.4974, BLEU=2.5172606091586025, ROUGE_L=0.07154407052940188
+results\llm_review_results_ctx1_ptself.csv: F1=0.547, Acc=0.583, BLEU=0.018124523401019065, ROUGE_L=0.047296898835880584
+
+AI baseline metrics head 
+       model  accuracy  precision   recall  f1_score  roc_auc
+         SVM  0.878788   0.860465 0.948718  0.902439 0.920228
+RandomForest  0.909091   0.883721 0.974359  0.926829 0.955840
+
+这说明基于AI改进的代码审查 确实在F1-Score,Acc上得分更好，基于AI来设计对应的代码上下文和Prompt有显著的效果。
